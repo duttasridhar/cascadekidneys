@@ -1,0 +1,20 @@
+<section id="locations" ng-controller="locationsController">
+    <div class="container">
+        <div class="row ">
+            <div class="text-center">
+                <h2 class="section-heading">Our Locations</h2>
+                <hr class="primary">
+            </div>
+            <div class="col-lg-9  map" id="map"></div>
+            <div class="col-lg-3">
+                <div class="address-info" ng-repeat="info in addressInfo">
+                    <h3>{{info.location}}</h3>
+                    <p>{{info.address}}</p>
+                    <p><a href="tel:{{info.phoneNumber}}"> {{info.phoneNumber}}</a></p>
+                    <h4>Hours Today:{{info.hoursToday}}</h4>
+                    <p><a href={{info.directions}} target="_blank"> GET DIRECTIONS</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
